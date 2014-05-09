@@ -19,6 +19,8 @@
 		BDAEF29D191C5BF5000A1E28 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDAEF285191C5BF5000A1E28 /* UIKit.framework */; };
 		BDAEF2A5191C5BF5000A1E28 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDAEF2A3191C5BF5000A1E28 /* InfoPlist.strings */; };
 		BDAEF2A7191C5BF5000A1E28 /* ParticleSim01Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAEF2A6191C5BF5000A1E28 /* ParticleSim01Tests.m */; };
+		BDAEF2B2191C5FDD000A1E28 /* Particle.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAEF2B1191C5FDD000A1E28 /* Particle.m */; };
+		BDAEF2B5191C6F8D000A1E28 /* Vector.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAEF2B4191C6F8D000A1E28 /* Vector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,10 @@
 		BDAEF2A2191C5BF5000A1E28 /* ParticleSim01Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ParticleSim01Tests-Info.plist"; sourceTree = "<group>"; };
 		BDAEF2A4191C5BF5000A1E28 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BDAEF2A6191C5BF5000A1E28 /* ParticleSim01Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParticleSim01Tests.m; sourceTree = "<group>"; };
+		BDAEF2B0191C5FDD000A1E28 /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Particle.h; path = ParticleSim01/Particle.h; sourceTree = "<group>"; };
+		BDAEF2B1191C5FDD000A1E28 /* Particle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Particle.m; path = ParticleSim01/Particle.m; sourceTree = "<group>"; };
+		BDAEF2B3191C6F8D000A1E28 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vector.h; path = ParticleSim01/Vector.h; sourceTree = "<group>"; };
+		BDAEF2B4191C6F8D000A1E28 /* Vector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Vector.m; path = ParticleSim01/Vector.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,10 @@
 		BDAEF275191C5BF5000A1E28 = {
 			isa = PBXGroup;
 			children = (
+				BDAEF2B3191C6F8D000A1E28 /* Vector.h */,
+				BDAEF2B4191C6F8D000A1E28 /* Vector.m */,
+				BDAEF2B0191C5FDD000A1E28 /* Particle.h */,
+				BDAEF2B1191C5FDD000A1E28 /* Particle.m */,
 				BDAEF287191C5BF5000A1E28 /* ParticleSim01 */,
 				BDAEF2A0191C5BF5000A1E28 /* ParticleSim01Tests */,
 				BDAEF280191C5BF5000A1E28 /* Frameworks */,
@@ -241,6 +251,8 @@
 			files = (
 				BDAEF292191C5BF5000A1E28 /* AppDelegate.m in Sources */,
 				BDAEF28E191C5BF5000A1E28 /* main.m in Sources */,
+				BDAEF2B5191C6F8D000A1E28 /* Vector.m in Sources */,
+				BDAEF2B2191C5FDD000A1E28 /* Particle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
