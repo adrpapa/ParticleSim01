@@ -21,6 +21,11 @@
 		BDAEF2A7191C5BF5000A1E28 /* ParticleSim01Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAEF2A6191C5BF5000A1E28 /* ParticleSim01Tests.m */; };
 		BDAEF2B2191C5FDD000A1E28 /* Particle.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAEF2B1191C5FDD000A1E28 /* Particle.m */; };
 		BDAEF2B5191C6F8D000A1E28 /* Vector.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAEF2B4191C6F8D000A1E28 /* Vector.m */; };
+		BDAEF2BA191CFEDE000A1E28 /* LoopEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAEF2B6191CFEDE000A1E28 /* LoopEngine.m */; };
+		BDAEF2BB191CFEDE000A1E28 /* PhysicsEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAEF2B9191CFEDE000A1E28 /* PhysicsEngine.m */; };
+		BDAEF2BE191DCF65000A1E28 /* ParticleSimView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAEF2BD191DCF65000A1E28 /* ParticleSimView.m */; };
+		BDAEF2C1191DCF9E000A1E28 /* ParticleSimControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAEF2C0191DCF9E000A1E28 /* ParticleSimControllerViewController.m */; };
+		BDAEF2C3191E979A000A1E28 /* particle.png in Resources */ = {isa = PBXBuildFile; fileRef = BDAEF2C2191E979A000A1E28 /* particle.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +59,15 @@
 		BDAEF2B1191C5FDD000A1E28 /* Particle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Particle.m; path = ParticleSim01/Particle.m; sourceTree = "<group>"; };
 		BDAEF2B3191C6F8D000A1E28 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vector.h; path = ParticleSim01/Vector.h; sourceTree = "<group>"; };
 		BDAEF2B4191C6F8D000A1E28 /* Vector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Vector.m; path = ParticleSim01/Vector.m; sourceTree = "<group>"; };
+		BDAEF2B6191CFEDE000A1E28 /* LoopEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoopEngine.m; path = ParticleSim01/LoopEngine.m; sourceTree = "<group>"; };
+		BDAEF2B7191CFEDE000A1E28 /* LoopEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoopEngine.h; path = ParticleSim01/LoopEngine.h; sourceTree = "<group>"; };
+		BDAEF2B8191CFEDE000A1E28 /* PhysicsEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhysicsEngine.h; path = ParticleSim01/PhysicsEngine.h; sourceTree = "<group>"; };
+		BDAEF2B9191CFEDE000A1E28 /* PhysicsEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhysicsEngine.m; path = ParticleSim01/PhysicsEngine.m; sourceTree = "<group>"; };
+		BDAEF2BC191DCF65000A1E28 /* ParticleSimView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParticleSimView.h; path = ParticleSim01/ParticleSimView.h; sourceTree = "<group>"; };
+		BDAEF2BD191DCF65000A1E28 /* ParticleSimView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParticleSimView.m; path = ParticleSim01/ParticleSimView.m; sourceTree = "<group>"; };
+		BDAEF2BF191DCF9E000A1E28 /* ParticleSimControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParticleSimControllerViewController.h; path = ParticleSim01/ParticleSimControllerViewController.h; sourceTree = "<group>"; };
+		BDAEF2C0191DCF9E000A1E28 /* ParticleSimControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParticleSimControllerViewController.m; path = ParticleSim01/ParticleSimControllerViewController.m; sourceTree = "<group>"; };
+		BDAEF2C2191E979A000A1E28 /* particle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = particle.png; path = ParticleSim01/particle.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +97,15 @@
 		BDAEF275191C5BF5000A1E28 = {
 			isa = PBXGroup;
 			children = (
+				BDAEF2C2191E979A000A1E28 /* particle.png */,
+				BDAEF2BF191DCF9E000A1E28 /* ParticleSimControllerViewController.h */,
+				BDAEF2C0191DCF9E000A1E28 /* ParticleSimControllerViewController.m */,
+				BDAEF2BC191DCF65000A1E28 /* ParticleSimView.h */,
+				BDAEF2BD191DCF65000A1E28 /* ParticleSimView.m */,
+				BDAEF2B6191CFEDE000A1E28 /* LoopEngine.m */,
+				BDAEF2B7191CFEDE000A1E28 /* LoopEngine.h */,
+				BDAEF2B8191CFEDE000A1E28 /* PhysicsEngine.h */,
+				BDAEF2B9191CFEDE000A1E28 /* PhysicsEngine.m */,
 				BDAEF2B3191C6F8D000A1E28 /* Vector.h */,
 				BDAEF2B4191C6F8D000A1E28 /* Vector.m */,
 				BDAEF2B0191C5FDD000A1E28 /* Particle.h */,
@@ -231,6 +254,7 @@
 			files = (
 				BDAEF28C191C5BF5000A1E28 /* InfoPlist.strings in Resources */,
 				BDAEF294191C5BF5000A1E28 /* Images.xcassets in Resources */,
+				BDAEF2C3191E979A000A1E28 /* particle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,10 +273,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDAEF2C1191DCF9E000A1E28 /* ParticleSimControllerViewController.m in Sources */,
 				BDAEF292191C5BF5000A1E28 /* AppDelegate.m in Sources */,
 				BDAEF28E191C5BF5000A1E28 /* main.m in Sources */,
 				BDAEF2B5191C6F8D000A1E28 /* Vector.m in Sources */,
+				BDAEF2BB191CFEDE000A1E28 /* PhysicsEngine.m in Sources */,
 				BDAEF2B2191C5FDD000A1E28 /* Particle.m in Sources */,
+				BDAEF2BE191DCF65000A1E28 /* ParticleSimView.m in Sources */,
+				BDAEF2BA191CFEDE000A1E28 /* LoopEngine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

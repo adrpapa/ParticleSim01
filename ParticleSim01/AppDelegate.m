@@ -10,12 +10,23 @@
 
 @implementation AppDelegate
 
+@synthesize viewController;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    
+    ParticleSimControllerViewController *vc = [[ParticleSimControllerViewController alloc] init];
+    self.viewController = vc;
+    
+    // Add the view controller's view to the window
+	viewController.view.frame = [UIScreen mainScreen].applicationFrame;
+	[self.window addSubview:[viewController view]];
+    
+    self.window.backgroundColor = [UIColor blackColor];
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

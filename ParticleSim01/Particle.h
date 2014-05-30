@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "Vector.h"
 
+#define _GRAVITYACCELERATION    -9.8f
+#define _AIRDENSITY             1.23
+#define _DRAGCOEFFICIENT        0.6
+#define _WINDSPEED              10.0
+
 @interface Particle : NSObject
 {
     float fMass;
@@ -18,8 +23,21 @@
     Vector *vForces;
     float fRadius;
     Vector *vGravity;
+    CGPoint startPos;
+    Vector *vPreviousPosition;
+    Vector *vImpactForces;
+    BOOL bCollision;
 }
 
+@property float fMass;
+@property float fRadius;
+@property (strong,nonatomic) Vector *vPosition;
+@property (strong,nonatomic) Vector *vVelocity;
+@property (strong,nonatomic) Vector *vImpactForces;
+
+@property (nonatomic) CGPoint startPos;
+
+- (void)calcLoads;
 - (void)updateBodyEuler:(double)dt;
 - (void)render;
 
