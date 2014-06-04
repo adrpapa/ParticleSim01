@@ -10,11 +10,11 @@
 
 @implementation Particle
 
-@synthesize vPosition,vVelocity;
+@synthesize vPosition,vVelocity,fMass,vImpactForces, vPreviousPosition;
 
-@synthesize startPos, fRadius;
+@synthesize startPos, fRadius, bCollision;
 
-- (id)init
+- (id)initWithPosition:(CGPoint)pos
 {
     self = [super init];
     
@@ -22,7 +22,7 @@
     {
         fMass = 1.0;
         
-        vPosition = [[Vector alloc] initWithZeros];
+        vPosition = [[Vector alloc] initWithX:pos.x Y:pos.y Z:0.0];
         vVelocity = [[Vector alloc] initWithZeros];
         vForces = [[Vector alloc] initWithZeros];
         vPreviousPosition = [[Vector alloc] initWithZeros];
@@ -63,7 +63,7 @@
         [vDrag Normalize];
         
         fDrag = 0.5 * _AIRDENSITY * fSpeed * fSpeed * (M_PI * fRadius * fRadius) * _DRAGCOEFFICIENT;
-        
+             
         [vDrag Mul:(double)fDrag];
         
         [vForces Add:vDrag];
@@ -84,6 +84,10 @@
     a = [[Vector alloc] initWithZeros];
     dv = [[Vector alloc] initWithZeros];
     ds = [[Vector alloc] initWithZeros];
+    
+    vPreviousPosition.x = vPosition.x;
+    vPreviousPosition.y = vPosition.y;
+    vPreviousPosition.z = vPosition.z;
     
     // a = F / m
     a = [Vector Div:vForces scalar:(double)fMass];

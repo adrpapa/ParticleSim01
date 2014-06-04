@@ -12,7 +12,8 @@
 
 #define _TIMESTEP               0.1
 #define _RENDER_FRAME_COUNT     10
-#define _RESTITUTION            0.6
+#define _RESTITUTION            0.8
+#define _GROUND_PLANE           200
 
 @interface LoopEngine : NSObject <ParticleSimViewDelegate>
 {

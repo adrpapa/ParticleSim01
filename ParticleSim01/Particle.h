@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Vector.h"
 
-#define _GRAVITYACCELERATION    -9.8f
+#define _GRAVITYACCELERATION    9.8f
 #define _AIRDENSITY             1.23
 #define _DRAGCOEFFICIENT        0.6
 #define _WINDSPEED              10.0
@@ -34,9 +34,12 @@
 @property (strong,nonatomic) Vector *vPosition;
 @property (strong,nonatomic) Vector *vVelocity;
 @property (strong,nonatomic) Vector *vImpactForces;
+@property (strong,nonatomic) Vector *vPreviousPosition;
+@property (nonatomic) BOOL bCollision;
 
 @property (nonatomic) CGPoint startPos;
 
+- (id)initWithPosition:(CGPoint)pos;
 - (void)calcLoads;
 - (void)updateBodyEuler:(double)dt;
 - (void)render;

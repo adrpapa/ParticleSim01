@@ -27,13 +27,13 @@
             NSUInteger _x = arc4random_uniform(self.frame.size.width);
             NSUInteger _y = arc4random_uniform(self.frame.size.height/5);
             
-            CGPoint _startPos = CGPointMake(_x, self.frame.size.height - _y);
+            CGPoint _startPos = CGPointMake(_x, _y);
             
             particleView.layer.position = _startPos;
             
             [particleViewDict setValue:particleView forKey:key];
             
-            Particle *particle = [[Particle alloc] init];
+            Particle *particle = [[Particle alloc] initWithPosition:_startPos];
             particle.startPos = _startPos;
             
             [delegate addEntity:particle withKey:key];
