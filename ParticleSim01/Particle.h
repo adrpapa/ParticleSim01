@@ -11,7 +11,7 @@
 
 #define _GRAVITYACCELERATION    9.8f
 #define _AIRDENSITY             1.23
-#define _DRAGCOEFFICIENT        0.6
+#define _DRAGCOEFFICIENT        0.006
 #define _WINDSPEED              10.0
 
 @interface Particle : NSObject

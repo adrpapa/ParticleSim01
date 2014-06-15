@@ -31,7 +31,7 @@
         bCollision = false;
         
         fSpeed = 0.0;
-        fRadius = 0.1;
+        fRadius = 1.5;
     }
     
     return self;

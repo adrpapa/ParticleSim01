@@ -8,19 +8,20 @@
 
 #import <Foundation/Foundation.h>
 #import "ParticleSimView.h"
-//#import "PhysicsEngine.h"
 
 #define _TIMESTEP               0.1
 #define _RENDER_FRAME_COUNT     10
 #define _RESTITUTION            0.8
-#define _GROUND_PLANE           200
+#define _RESTITUTION_O          0.8
+#define _GROUND_PLANE           300
+#define TIME_UNIT				0.04
+#define MAX_OBSTACLES           10
 
 @interface LoopEngine : NSObject <ParticleSimViewDelegate>
 {
 	ParticleSimView *mainView;
-//	NSMutableDictionary *physicsEngineDict;
-//    PhysicsEngine *physicsEngine;
     NSMutableDictionary *particleDict;
+    NSMutableArray *obstacleArray;
     NSThread *loopEngineThread;
     BOOL continueLoop;
 }

@@ -8,9 +8,6 @@
 
 #import "LoopEngine.h"
 
-#define TIME_UNIT					0.04
-#define MAX_OBJS                    5
-
 @implementation LoopEngine
 
 @synthesize mainView;
@@ -21,9 +18,8 @@
     
     if (self)
     {
-//		physicsEngineDict = [NSMutableDictionary dictionaryWithCapacity:MAX_OBJS];
-//        physicsEngine = [[PhysicsEngine alloc] init];
         particleDict = [NSMutableDictionary dictionaryWithCapacity:MAX_UNITS];
+        obstacleArray = [NSMutableArray arrayWithCapacity:MAX_OBSTACLES];
     }
     
     return self;
@@ -81,6 +77,11 @@
 	[particleDict setValue:_particle forKey:key];
 }
 
+- (void)addEntity:(Particle*)_particle
+{
+    [obstacleArray addObject:_particle];
+}
+
 - (void)removeEntity:(NSString*)key
 {
 	[particleDict removeObjectForKey:key];
@@ -130,7 +131,8 @@
             // Fi = n x (IMPULSO / dt)
             // F = ma => F = m dv/dt
             J = -([Vector Dot:vr _v2:n]) * (_RESTITUTION+1) * p.fMass;
-            Fi = n;
+            Fi.x = n.x;
+            Fi.y = n.y;
             // x=0  y=-1  =>   Fi.x = 0   Fi.y = Fi.y * -1
             [Fi Mul:J/_TIMESTEP];
             [p.vImpactForces Add:Fi];
@@ -148,6 +150,48 @@
             hasCollision = true;
         }
     }
+    
+//    [obstacleArray  enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    
+    for (int idx=0; idx < obstacleArray.count; idx++)
+    {
+        Particle *obstacle = (Particle*)[obstacleArray objectAtIndex:idx];
+
+        float r;
+        Vector *d = [[Vector alloc] initWithZeros];
+        float s;
+//        Vector *n = [[Vector alloc] initWithZeros];
+//        Vector *vr = [[Vector alloc] initWithZeros];
+//        float vrn;
+//        float J;
+//        Vector *Fi = [[Vector alloc] initWithZeros];
+        
+        r = p.fRadius + obstacle.fRadius;
+        d = [Vector Sub:p.vPosition _v2:obstacle.vPosition];
+        s = [d Magnitude] - r;
+        
+        if (s <= 0.0)
+        {
+            [d Normalize];
+            n = d;
+            vr = [Vector Sub:p.vVelocity _v2:obstacle.vVelocity];
+            vrn = [Vector Dot:vr _v2:n];
+            
+            if (vrn < 0.0)
+            {
+                J = -(vrn) * (_RESTITUTION_O+1) / (1/p.fMass + 1/obstacle.fMass);
+                Fi.x = n.x;
+                Fi.y = n.y;
+                [Fi Mul:J/_TIMESTEP];
+                [p.vImpactForces Add:Fi];
+                
+                [p.vPosition Sub:[Vector Mul:n scalar:s]];
+                
+                hasCollision = true;
+            }
+        }
+    }
+//    }];
 
     return hasCollision;
 }
