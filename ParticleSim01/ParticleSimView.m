@@ -51,20 +51,19 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
 
 - (void)drawCircle:(CGContextRef)context inPos:(CGPoint)centro
 {
-        // Drawing with a white stroke color
-        CGContextSetRGBStrokeColor(context, 1.0, 1.0, 1.0, 1.0);
-        // And draw with a blue fill color
-        CGContextSetRGBFillColor(context, 1.0, 0.0, 0.0, 1.0);
-        // Draw them with a 2.0 stroke width so they are a bit more visible.
-        CGContextSetLineWidth(context, 1.0);
+    // Drawing with a white stroke color
+    CGContextSetRGBStrokeColor(context, 1.0, 1.0, 1.0, 1.0);
+    // And draw with a blue fill color
+    CGContextSetRGBFillColor(context, 1.0, 0.0, 0.0, 1.0);
+    // Draw them with a 2.0 stroke width so they are a bit more visible.
+    CGContextSetLineWidth(context, 1.0);
 
-        // Fill rect convenience equivalent to AddEllipseInRect(); FillPath();
-   //     CGContextFillEllipseInRect(context, circleRect);
+    // Fill rect convenience equivalent to AddEllipseInRect(); FillPath();
     CGContextAddArc(context, centro.x, centro.y, 10.0, DegreesToRadians(0), DegreesToRadians(360), 0);
-        // Close the path
-        CGContextClosePath(context);
-        // Fill & stroke the path
-        CGContextDrawPath(context, kCGPathFillStroke);
+    // Close the path
+    CGContextClosePath(context);
+    // Fill & stroke the path
+    CGContextDrawPath(context, kCGPathFillStroke);
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -122,9 +121,7 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
         obstacle.fRadius = _OBSTACLE_RADIUS;
         
         [delegate addEntity:obstacle];
-        
- //       CGRect circleRect = CGRectMake(_x, _y, _OBSTACLE_RADIUS*2, _OBSTACLE_RADIUS*2);
-        
+            
         [self drawCircle:context inPos:CGPointMake(_x, _y)];
     }
 }

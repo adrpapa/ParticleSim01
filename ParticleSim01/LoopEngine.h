@@ -15,7 +15,7 @@
 #define _RESTITUTION_O          0.8
 #define _GROUND_PLANE           300
 #define TIME_UNIT				0.04
-#define MAX_OBSTACLES           10
+
 
 @interface LoopEngine : NSObject <ParticleSimViewDelegate>
 {

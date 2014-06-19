@@ -11,7 +11,6 @@
 @implementation Particle
 
 @synthesize vPosition,vVelocity,fMass,vImpactForces, vPreviousPosition;
-
 @synthesize startPos, fRadius, bCollision;
 
 - (id)initWithPosition:(CGPoint)pos

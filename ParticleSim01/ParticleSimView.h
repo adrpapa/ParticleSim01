@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "Particle.h"
 
-#define MAX_UNITS           1
-#define MAX_OBSTACLES       20
+#define MAX_UNITS           200
 #define _GROUND_PLANE       300
 #define _OBSTACLE_RADIUS    10
+#define MAX_OBSTACLES       10
 
 @protocol ParticleSimViewDelegate;
 

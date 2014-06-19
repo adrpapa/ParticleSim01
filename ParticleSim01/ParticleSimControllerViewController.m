@@ -30,10 +30,7 @@
 
     le.mainView = vw;
 	self.view = vw;
-    //    self.mainView = view;
     [[self view] window].rootViewController = self;
-    
- //   [le startLoopEngineThread];
 }
 
 - (void)viewDidLoad
